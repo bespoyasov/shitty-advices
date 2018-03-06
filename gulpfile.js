@@ -10,7 +10,6 @@ const htmlmin = require('gulp-htmlmin')
 
 const postcss = require('gulp-postcss')
 const autoprefixer = require('autoprefixer')
-const importCss = require('gulp-import-css')
 
 const watch = require('gulp-watch')
 const webserver = require('gulp-webserver')
@@ -36,10 +35,10 @@ const typografRules = [{
 
 // tasks
 gulp.task('default', ['html', 'css', 'watch', 'webserver'])
-gulp.task('build', ['html', 'css', 'stuff'])
+gulp.task('build', ['html', 'css'])
 
 gulp.task('html', function() {
-  return gulp.src('./src/*.html')
+  return gulp.src('./src/pages/*.html')
     .pipe(include())
       .on('error', console.log)
     .pipe(typograf({ 
@@ -53,26 +52,12 @@ gulp.task('html', function() {
 })
 
 gulp.task('css', function() {
-  return gulp.src('./src/css/style.css')
-    .pipe(importCss())
+  return gulp.src('./src/css/*.css')
     .pipe(postcss([ autoprefixer({
       browsers: ['last 4 versions', 'ios 7']
     }) ]))
     .pipe(gulp.dest('./build/css/'))
 })
-
-// gulp.task('stuff', function() {
-//   const favicons = gulp.src('./src/static/favicons/*')
-//     .pipe(gulp.dest('./build/favicons/'))
-  
-//   const txt = gulp.src('./src/*.txt')
-//     .pipe(gulp.dest('./build/'))
-
-//   const sw = gulp.src('./src/sw.js')
-//     .pipe(gulp.dest('./build/'))
-
-//   return merge(favicons, txt, sw)
-// })
 
 
 gulp.task('watch', function() {
