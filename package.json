@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bespoyasov/evil-advices.git"
+    "url": "git+https://github.com/bespoyasov/shitty-advices.git"
   },
   "keywords": [],
   "author": "Alex Bespoyasov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bespoyasov/evil-advices/issues"
+    "url": "https://github.com/bespoyasov/shitty-advices/issues"
   },
-  "homepage": "https://github.com/bespoyasov/evil-advices#readme",
+  "homepage": "https://github.com/bespoyasov/shitty-advices#readme",
   "devDependencies": {
     "autoprefixer": "^8.0.0",
     "gulp": "^3.9.1",
