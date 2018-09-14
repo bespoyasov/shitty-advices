@@ -14,7 +14,7 @@
 }
 
 .navigation a:hover {
-  color: rgba(0,0,0,.4);
+  color: rgba(0,0,0,1);
 }
 
 .navigation a:first-child {
