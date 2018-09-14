@@ -1,0 +1,28 @@
+.navigation {
+  position: absolute;
+  left:0;
+  top:50%;
+  margin-top:-0.5em;
+  font-size:50px;
+}
+
+.navigation a {
+  position: absolute;
+  text-decoration: none;
+  color: rgba(0,0,0,.2);
+  transition: color 0.2s;
+}
+
+.navigation a:hover {
+  color: rgba(0,0,0,.4);
+}
+
+.navigation a:first-child {
+  left: 0;
+  margin-left:20px;
+}
+
+.navigation a:last-child {
+  left: 100vw;
+  margin-left: -80px;
+}
